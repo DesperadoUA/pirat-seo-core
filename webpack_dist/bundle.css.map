@@ -1,0 +1,1 @@
+{"version":3,"sources":["webpack:///./components/content/style.css"],"names":[],"mappings":"AAAA;AACA;AACA;AACA","file":"bundle.css","sourcesContent":[".content {\n\tborder: 1px solid red;\n\tfont-size: 22px;\n}\n"],"sourceRoot":""}

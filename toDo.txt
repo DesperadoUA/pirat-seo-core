@@ -1,0 +1,10 @@
+[x] Add translates
+[x] Fix routes
+[] Add git
+[] Php Prettier
+[] Show debug for dev version
+[x] Add canonical
+[x] Add styles
+  [x] Add schemas for templates
+  [x] Add common load style for components
+  [] Add common load style for short_codes

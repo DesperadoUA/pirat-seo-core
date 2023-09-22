@@ -1,0 +1,47 @@
+<?php
+class DefaultBuilder implements Builder {
+    use UI;
+    private $ampPrefix = PREFIX_AMP;
+    private $translate = TRANSLATE;
+    private $lang = LANG;
+    private $siteUrl = SITE_URL;
+    private $url = URL;
+    public function wp_head(HeadData $data) {
+        wp_head();
+        return '';
+    }
+    public function styles($str) {
+        return "<style>{$str}</style>";
+    }
+    public function canonical() {
+        $link = $this->siteUrl.$this->url.$this->ampPrefix.'/';
+        return "<link rel='amphtml' href='{$link}' />";
+    }
+    public function wp_footer() {
+        wp_footer();
+        return '';
+    }
+    public function ampAttrHead() {
+        return "";
+    }
+    public function header() {
+        return "<header>Default Header</header>";
+    }
+    public function footer() {
+        return "<footer>Default Footer</footer>";
+    }
+    public function content($content) {
+        return "<article class='content'>{$content}</article>";
+    }
+    public function faq(Faq $faq) {
+        return "<section class='faq'>
+            <h2>{$faq->title}</h2>
+            </section>";
+    }
+    public function getTranslate($key) {
+        return array_key_exists($key, $this->translate) ? $this->translate[$key][$this->lang] : "";
+    }
+    public function test() {
+        return $this->button();
+    }
+}
