@@ -1,6 +1,5 @@
 [x] Add translates
 [x] Fix routes
-[] Add git
 [] Php Prettier
 [] Show debug for dev version
 [x] Add canonical
