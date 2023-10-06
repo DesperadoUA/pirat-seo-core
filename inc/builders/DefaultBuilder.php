@@ -49,6 +49,7 @@ class DefaultBuilder implements Builder {
             'tag' => 'div',
             'color' => 'cairo',
             'decoration' => 'underline',
+            'align' => 'center',
             'class' => 'custom_class custom_class_2'
         ]);
         return $this->text($settings, $content);
