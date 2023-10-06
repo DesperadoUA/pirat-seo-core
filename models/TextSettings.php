@@ -23,8 +23,7 @@ class TextSettings {
             ? "text_size_{$settings['size']}" : "text_size_medium";
         $this->tag = (array_key_exists('tag', $settings) and in_array($settings['tag'], $this->availableTag))
             ? $settings['tag'] : "span";
-        $this->class = (array_key_exists('class', $settings) and  !empty($settings['class']))
-            ? $settings['class'] : "";
+        $this->class = array_key_exists('class', $settings) ? $settings['class'] : "";
         $this->decoration = (array_key_exists('decoration', $settings) and in_array($settings['decoration'], $this->availableDecoration))
             ? "text_decoration_{$settings['decoration']}" : "";
         $this->align = (array_key_exists('align', $settings) and in_array($settings['align'], $this->availableAlign))
