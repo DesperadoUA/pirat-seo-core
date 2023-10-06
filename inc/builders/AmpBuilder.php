@@ -65,8 +65,10 @@ class AmpBuilder implements Builder {
     public function test() {
         return $this->button();
     }
-    public function text(TextSettings $setting, $content) {
-        return 'Text component';
+    public function text(TextSettings $settings, $content) {
+        $classes = join(" ", $settings->getSettings());
+        $tagBefore = "<{$settings->tag} class='{$classes}'>";
+        $tagAfter = "</{$settings->tag}>";
+        return "{$tagBefore}{$content}{$tagAfter}";
     }
-
 }
