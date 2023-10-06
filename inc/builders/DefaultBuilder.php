@@ -42,6 +42,21 @@ class DefaultBuilder implements Builder {
         return array_key_exists($key, $this->translate) ? $this->translate[$key][$this->lang] : "";
     }
     public function test() {
-        return $this->button();
+        $content = 'Test content setting new';
+        $settings = new TextSettings([
+            'size' => '2x-large',
+            'weight' => 'bold',
+            'tag' => 'div',
+            'color' => 'cairo',
+            'decoration' => 'underline',
+            'class' => 'custom_class custom_class_2'
+        ]);
+        return $this->text($settings, $content);
+    }
+    public function text(TextSettings $settings, $content) {
+       $classes = join(" ", $settings->getSettings());
+       $tagBefore = "<{$settings->tag} class='{$classes}'>";
+       $tagAfter = "</{$settings->tag}>";
+       return "{$tagBefore}{$content}{$tagAfter}";
     }
 }

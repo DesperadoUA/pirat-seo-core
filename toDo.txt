@@ -6,4 +6,4 @@
 [x] Add styles
   [x] Add schemas for templates
   [x] Add common load style for components
-  [] Add common load style for short_codes
+  [x] Add common load style for short_codes

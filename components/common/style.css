@@ -1,3 +1,114 @@
+:root {
+	--cairo: red;
+	--calgary: blue;
+	--cordoba: green;
+	--callao: yellow;
+	--cucuta: gold;
+	--colombo: brown;
+	--cancun: orange;
+	--cochin: gray;
+	--cardiff: black;
+	--cleveland: white;
+}
+.text_color_cairo {
+	color: var(--cairo);
+}
+.text_color_calgary {
+	color: var(--calgary);
+}
+.text_color_cordoba {
+	color: var(--cordoba);
+}
+.text_color_callao {
+	color: var(--callao);
+}
+.text_color_cucuta {
+	color: var(--cucuta);
+}
+.text_color_colombo {
+	color: var(--colombo);
+}
+.text_color_cancun {
+	color: var(--cancun);
+}
+.text_color_cochin {
+	color: var(--cochin);
+}
+.text_color_cardiff {
+	color: var(--cardiff);
+}
+.text_color_cleveland {
+	color: var(--cleveland);
+}
+.text_decoration_underline {
+	text-decoration: underline;
+}
+.text_decoration_overline {
+	text-decoration: overline;
+}
+.text_decoration_line-through {
+	text-decoration: line-through;
+}
+.text_decoration_blink {
+	text-decoration: blink;
+}
+.text_decoration_solid {
+	text-decoration: solid;
+}
+.text_decoration_wavy {
+	text-decoration: wavy;
+}
+.text_decoration_dotted {
+	text-decoration: dotted;
+}
+.text_decoration_dashed {
+	text-decoration: dashed;
+}
+.text_decoration_double {
+	text-decoration: double;
+}
+.text_size_small {
+	font-size: 12px;
+}
+.text_size_medium {
+	font-size: 16px;
+}
+.text_size_large {
+	font-size: 20px;
+}
+.text_size_x-large {
+	font-size: 24px;
+}
+.text_size_2x-large {
+	font-size: 48px;
+}
+.text_weight_thin {
+	font-weight: 100;
+}
+.text_weight_extra-light {
+	font-weight: 200;
+}
+.text_weight_light {
+	font-weight: 300;
+}
+.text_weight_regular {
+	font-weight: 400;
+}
+.text_weight_medium {
+	font-weight: 500;
+}
+.text_weight_semi-bold {
+	font-weight: 600;
+}
+.text_weight_bold {
+	font-weight: 700;
+}
+.text_weight_extra-bold {
+	font-weight: 800;
+}
+.text_weight_black {
+	font-weight: 900;
+}
 .common-style {
-	border: 1px solid blue;
+	border: 1px solid var(--calgary);
 }

@@ -10,5 +10,6 @@ interface Builder {
   public function content($content);
   public function faq(Faq $faq);
   public function getTranslate($key);
+  public function text(TextSettings $settings, $content);
 }
 ?>

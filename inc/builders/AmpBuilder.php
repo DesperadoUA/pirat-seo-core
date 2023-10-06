@@ -65,4 +65,8 @@ class AmpBuilder implements Builder {
     public function test() {
         return $this->button();
     }
+    public function text(TextSettings $setting, $content) {
+        return 'Text component';
+    }
+
 }
