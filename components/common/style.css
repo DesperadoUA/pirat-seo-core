@@ -121,7 +121,187 @@
 .text_align_justify {
 	text-align: justify;
 }
-/* 'left', 'right', 'center', 'justify' */
+.p_xxs {
+	padding: 2px;
+}
+.p_xs {
+	padding: 4px;
+}
+.p_s {
+	padding: 8px;
+}
+.p_m {
+	padding: 16px;
+}
+.p_l {
+	padding: 32px;
+}
+.p_xl {
+	padding: 64px;
+}
+.p_t_xxs {
+	padding-top: 2px;
+}
+.p_t_xs {
+	padding-top: 4px;
+}
+.p_t_s {
+	padding-top: 8px;
+}
+.p_t_m {
+	padding-top: 16px;
+}
+.p_t_l {
+	padding-top: 32px;
+}
+.p_t_xl {
+	padding-top: 64px;
+}
+.p_b_xxs {
+	padding-bottom: 2px;
+}
+.p_b_xs {
+	padding-bottom: 4px;
+}
+.p_b_s {
+	padding-bottom: 8px;
+}
+.p_b_m {
+	padding-bottom: 16px;
+}
+.p_b_l {
+	padding-bottom: 32px;
+}
+.p_b_xl {
+	padding-bottom: 64px;
+}
+.p_l_xxs {
+	padding-left: 2px;
+}
+.p_l_xs {
+	padding-left: 4px;
+}
+.p_l_s {
+	padding-left: 8px;
+}
+.p_l_m {
+	padding-left: 16px;
+}
+.p_l_l {
+	padding-left: 32px;
+}
+.p_l_xl {
+	padding-left: 64px;
+}
+.p_r_xxs {
+	padding-right: 2px;
+}
+.p_r_xs {
+	padding-right: 4px;
+}
+.p_r_s {
+	padding-right: 8px;
+}
+.p_r_m {
+	padding-right: 16px;
+}
+.p_r_l {
+	padding-right: 32px;
+}
+.p_r_xl {
+	padding-right: 64px;
+}
+.m_xxs {
+	margin: 2px;
+}
+.m_xs {
+	margin: 4px;
+}
+.m_s {
+	margin: 8px;
+}
+.m_m {
+	margin: 16px;
+}
+.m_l {
+	margin: 32px;
+}
+.m_xl {
+	margin: 64px;
+}
+.m_t_xxs {
+	margin-top: 2px;
+}
+.m_t_xs {
+	margin-top: 4px;
+}
+.m_t_s {
+	margin-top: 8px;
+}
+.m_t_m {
+	margin-top: 16px;
+}
+.m_t_l {
+	margin-top: 32px;
+}
+.m_t_xl {
+	margin-top: 64px;
+}
+.m_b_xxs {
+	margin-bottom: 2px;
+}
+.m_b_xs {
+	margin-bottom: 4px;
+}
+.m_b_s {
+	margin-bottom: 8px;
+}
+.m_b_m {
+	margin-bottom: 16px;
+}
+.m_b_l {
+	margin-bottom: 32px;
+}
+.m_b_xl {
+	margin-bottom: 64px;
+}
+.m_l_xxs {
+	margin-left: 2px;
+}
+.m_l_xs {
+	margin-left: 4px;
+}
+.m_l_s {
+	margin-left: 8px;
+}
+.m_l_m {
+	margin-left: 16px;
+}
+.m_l_l {
+	margin-left: 32px;
+}
+.m_l_xl {
+	margin-left: 64px;
+}
+.m_r_xxs {
+	margin-right: 2px;
+}
+.m_r_xs {
+	margin-right: 4px;
+}
+.m_r_s {
+	margin-right: 8px;
+}
+.m_r_m {
+	margin-right: 16px;
+}
+.m_r_l {
+	margin-right: 32px;
+}
+.m_r_xl {
+	margin-right: 64px;
+}
+
 .common-style {
 	border: 1px solid var(--calgary);
 }

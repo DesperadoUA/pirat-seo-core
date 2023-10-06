@@ -43,6 +43,7 @@ class DefaultBuilder implements Builder {
     }
     public function test() {
         $content = 'Test content setting new';
+        $content2 = 'Test content 2 setting new';
         $settings = new TextSettings([
             'size' => '2x-large',
             'weight' => 'bold',
@@ -52,7 +53,14 @@ class DefaultBuilder implements Builder {
             'align' => 'center',
             'class' => 'custom_class custom_class_2'
         ]);
-        return $this->text($settings, $content);
+        $settings2 = new TextSettings([
+            'size' => 'large',
+            'weight' => 'thin',
+            'tag' => 'div',
+            'color' => 'colombo',
+            'align' => 'left'
+        ]);
+        return join(" ", [$this->text($settings, $content), $this->text($settings2, $content2)]);
     }
     public function text(TextSettings $settings, $content) {
        $classes = join(" ", $settings->getSettings());
