@@ -49,11 +49,9 @@ else {
     $template = 'DEFAULT';
 }
 $css = '';
-foreach(TEMPLATES_DI_STYLE[$postType][$template] as $component) {
-  $fileName = IS_AMP ? 'amp.css' : 'style.css';
-  $filePath = THEME_ROOT."/components/".$component."/".$fileName;
-  if(file_exists($filePath)) $css .= file_get_contents($filePath);
-}
+$fileName = IS_AMP ? 'amp.css' : '.css';
+$filePath = THEME_ROOT."/webpack_dist/".TEMPLATES_DI_STYLE[$postType][$template].$fileName;
+if(file_exists($filePath)) $css .= file_get_contents($filePath);
 $dirs = scandir(THEME_ROOT."/inc/short_codes/");
 foreach($dirs as $dir) {
   if(is_dir(THEME_ROOT.'/inc/short_codes/'.$dir) and isDirLoad($dir)) {
@@ -62,4 +60,5 @@ foreach($dirs as $dir) {
     if(file_exists($filePath)) $css .= file_get_contents($filePath);
   }
 }
+
 echo $builder->styles($css);
