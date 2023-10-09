@@ -1,6 +1,7 @@
 const fs = require('fs')
 const { schemas } = require('./dev/schemes.js')
 const { MinifyCss } = require('./dev/MinifyCss')
+const { MinifyJs } = require('./dev/MinifyJs')
 const typeBuild =
 	process.argv.length === 3 && process.argv[2] === 'amp' ? 'amp' : 'default'
 const configFileName = { amp: 'amp', default: 'style' }
