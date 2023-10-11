@@ -61,49 +61,6 @@ class DefaultBuilder implements Builder {
             'color' => 'colombo',
             'align' => 'left'
         ]);
-        echo "
-        <style>
-            .card {
-                width: 300px;
-                height: 200px;
-                border: 1px solid red;
-                position: relative;
-            }
-            .wrapper {
-                width: 93%;
-                height: 90%;
-                max-height: 100%;
-                overflow-y: auto;
-                box-sizing: border-box;
-                opacity: 0;
-                padding-right: 5px;
-                top: 5%;
-                left: 5%;
-                position: absolute;
-                transition: 0.7s;
-                cursor: pointer;
-            }
-            .fadeIn {
-                opacity: 1;
-            }
-        </style>";
-        echo "<div class='card'>
-            <div class='wrapper managerCard'>
-                <p>В html разметке страницы просто прописываем блоку класс contentiable, далее при запуске в браузере нужно дописать 
-                еще пару строк контента что бы убедится что его размер не увеличивается больше чем указано в max-height и что 
-                появляется scroll при большой высоте контента блока.</p>
-                <p>В html разметке страницы просто прописываем блоку класс contentiable, далее при запуске в браузере нужно дописать 
-                еще пару строк контента что бы убедится что его размер не увеличивается больше чем указано в max-height и что 
-                появляется scroll при большой высоте контента блока.</p>
-            </div>
-        </div>
-        <div class='card'>
-            <div class='wrapper managerCard'>
-                <p>В html разметке страницы просто прописываем блоку класс contentiable, далее при запуске в браузере нужно дописать 
-                еще пару строк контента что бы убедится что его размер не увеличивается больше чем указано в max-height и что 
-                появляется scroll при большой высоте контента блока.</p>
-            </div>
-        </div>";
         return join(" ", [$this->text($settings, $content), $this->text($settings2, $content2)]);
     }
     public function text(TextSettings $settings, $content) {
