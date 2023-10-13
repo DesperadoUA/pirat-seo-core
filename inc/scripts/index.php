@@ -7,12 +7,6 @@ function remove_jquery_migrate( &$scripts ) {
 }
 add_filter( 'wp_default_scripts', 'remove_jquery_migrate' );
 
-// register scripts and styles
-add_action('wp_enqueue_scripts', 'front_scripts');
-function front_scripts() {
-    wp_enqueue_script('main-js', get_template_directory_uri() . '/webpack_dist/bundle.js', null, null, true);
-}
-
 wp_deregister_script('jquery');
 /// Удаление редактора Gutenberg с фронтовой части
 function wpassist_remove_block_library_css() {

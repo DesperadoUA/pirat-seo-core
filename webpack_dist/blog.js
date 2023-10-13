@@ -1,0 +1,1 @@
+function common(){console.log("Common script")}function content(){console.log("content")}function faq(){console.log("faq")}function blogScript(){console.log("Blog script")}

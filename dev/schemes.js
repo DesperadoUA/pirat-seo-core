@@ -17,8 +17,8 @@ module.exports.schemas = {
 	},
 	POSTS: {
 		BLOG: {
-			js: jsDI.concat(['faq']),
-			css: cssDI.concat(['faq']),
+			js: jsDI.concat(['faq', 'blog']),
+			css: cssDI.concat(['faq', 'blog']),
 			fileName: 'blog'
 		},
 		GAME: {

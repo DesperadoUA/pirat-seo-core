@@ -1,0 +1,1 @@
+function commonAmp(){console.log("Common Amp")}function blogScript(){console.log("Blog script amp")}

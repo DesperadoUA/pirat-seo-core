@@ -19,8 +19,12 @@ class DefaultBuilder implements Builder {
     }
     public function wp_footer() {
         wp_footer();
-        echo '<script type="text/javascript" src="http://localhost/test-site/wp-content/themes/seo/js/script.js" ></script>';
-        return '';
+        global $post;
+        $template = getTemplate($post);
+        $postType = getPostType($post);
+        $fileName = '.js';
+        $filePath = TEMPLATE_DIR_URI."/webpack_dist/".TEMPLATES_DI_STYLE[$postType][$template].$fileName;
+        return "<script type='text/javascript' src='{$filePath}' ></script>";
     }
     public function ampAttrHead() {
         return "";

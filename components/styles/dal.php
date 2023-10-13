@@ -1,53 +1,7 @@
 <?php
 global $post;
-$template = '';
-$postType = '';
-if(is_page() or $post->ID === ID_FRONT) {
-    $postType = 'PAGES';
-    switch ($post->ID) {
-        case ID_FRONT:
-          $template = 'FRONT_PAGE';
-          break;
-        case ID_PRIVACY_POLICY_PAGE:
-          $template = 'PRIVACY_POLICY_PAGE';
-          break;
-        default:
-          $template = 'DEFAULT';
-    }
-}
-else if(is_single()) {
-    $postType = 'POSTS';
-    switch ($post->post_type) {
-        case POST_TYPE_BLOG:
-          $template = 'BLOG';
-          break;
-        case POST_TYPE_GAME:
-          $template = 'GAME';
-          break;
-        default:
-          $template = 'DEFAULT';
-    }
-}
-else if(is_category()) {
-    $category = get_queried_object();
-    $postType = 'CATEGORY';
-    switch ($category->cat_ID) {
-        default:
-          $template = 'DEFAULT';
-    }
-}
-else if(is_tax()) {
-    $tax = get_queried_object();
-    $postType = 'TAX';
-    switch ($tax->term_id) {
-        default:
-          $template = 'DEFAULT';
-    }
-}
-else {
-    $postType = 'POSTS';
-    $template = 'DEFAULT';
-}
+$template = getTemplate($post);
+$postType = getPostType($post);
 $css = '';
 $fileName = IS_AMP ? 'amp.css' : '.css';
 $filePath = THEME_ROOT."/webpack_dist/".TEMPLATES_DI_STYLE[$postType][$template].$fileName;

@@ -45,8 +45,13 @@ class AmpBuilder implements Builder {
         return "amp";
     }
     public function header() {
+        global $post;
+        $template = getTemplate($post);
+        $postType = getPostType($post);
+        $fileName = '.amp.js';
+        $filePath = TEMPLATE_DIR_URI."/webpack_dist/".TEMPLATES_DI_STYLE[$postType][$template].$fileName;
         return "<header>AMP Header</header>
-            <amp-script layout='container' src='{$this->templateDirUri}/js/amp_script.js'>";
+            <amp-script layout='container' src='{$filePath}'>";
     }
     public function footer() {
         return "<footer>AMP Footer</footer></amp-script>";

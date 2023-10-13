@@ -1,15 +1,15 @@
 const querystring = require('querystring')
 const https = require('https')
 const fs = require('fs')
-const MinifyCss = (str, path) => {
-	const query = querystring.stringify({
-		input: str
-	})
+const Minify = (str, path) => {
+	const fileExtension = path.endsWith('.css') ? 'css' : 'js'
+	const apiConfig = { css: 'cssminifier', js: 'javascript-minifier' }
+	const query = querystring.stringify({ input: str })
 	const req = https.request(
 		{
 			method: 'POST',
 			hostname: 'www.toptal.com',
-			path: '/developers/cssminifier/api/raw'
+			path: `/developers/${apiConfig[fileExtension]}/api/raw`
 		},
 		resp => {
 			if (resp.statusCode !== 200) {
@@ -27,4 +27,4 @@ const MinifyCss = (str, path) => {
 	req.setHeader('Content-Length', query.length)
 	req.end(query, 'utf8')
 }
-module.exports.MinifyCss = MinifyCss
+module.exports.Minify = Minify
