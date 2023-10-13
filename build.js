@@ -22,8 +22,8 @@ for (postType in schemas) {
 	for (post in schemas[postType]) {
 		const { css } = schemas[postType][post]
 		const { js } = schemas[postType][post]
-		let commonStyle = getCommonScriptForPostType(css, 'css')
-		let commonScript = getCommonScriptForPostType(js, 'js')
+		const commonStyle = getCommonScriptForPostType(css, 'css')
+		const commonScript = getCommonScriptForPostType(js, 'js')
 		const fileName =
 			typeBuild === 'default'
 				? schemas[postType][post]['fileName']
